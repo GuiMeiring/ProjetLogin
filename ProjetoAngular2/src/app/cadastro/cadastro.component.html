@@ -1,0 +1,48 @@
+<body> 
+  <nav class="navbar bg-dark">
+    <div class="container-fluid">
+      <a class="navbar-brand">Navbar</a>
+      <form class="d-flex" role="search">
+        <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+        <button class="btn btn-outline-success" type="submit">Search</button>
+      </form>
+    </div>
+  </nav> 
+  <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <div class="container">
+      <div class="row">
+        <div class="offset-lg-4 col-lg-4 offset-md-2 col-md-6 offset-sm-2 col-sm-8 offset-xs-0 col-xs-12 login">
+            <br>
+            <br>
+            <br>
+            <div class="input-group">
+                <input type="text" class="components" id="name" required class="input" autofocus [(ngModel)]="name">
+                <label for="name" class="input-label">Nome</label>
+              </div>
+              <br>
+              <div class="input-group">
+                <input type="password" id="password" required class="input" [(ngModel)]="telefone">
+                <label  for="name" class="input-label">Telefone</label>
+              </div>
+              <br>
+          <br>
+          <div>
+            <button id="button" class="btn btn-outline-light btn-lg" (click)="addCadastro()">Add</button>
+            <button id="button" class="btn btn-outline-light btn-lg" (click)="list()">Lista</button>  
+            <button id="button" class="btn btn-outline-light btn-lg" (click)="delet()">Deletar</button>  
+          </div>
+          <br>
+          <br>
+          <div class="row text-center" *ngFor="let user of users">
+            <p><b>{{user.name}}</b> {{user.tel}}</p>
+          </div>
+          <br>
+        </div>
+      </div>
+    </div>
+</body>
